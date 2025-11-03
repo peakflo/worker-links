@@ -8,7 +8,8 @@ main = "src/index.ts"
 kv_namespaces = [
   
   # Replace below line with your namespace ID ('yarn createkv' output) 
-  { binding = "KV", id = "9d22b859b8e64997b8b43c2baab7a0ab" }
+  # { binding = "KV", id = "9d22b859b8e64997b8b43c2baab7a0ab" }
+  { binding = "KV", id = "6b05917f775f4096b82e49309d193ee3" }
 
   ]
 
@@ -17,7 +18,9 @@ compatibility_date = "2023-11-08"
 
 # Remove or comment out the route line if using workers_dev (and set below to true)
 workers_dev = false
-route = { pattern = "shortlink.jibbber.com/*", zone_name = "jibbber.com" }
+# route = { pattern = "shortlink.jibbber.com/*", zone_name = "jibbber.com" }
+route = { pattern = "shortlink.peakflo.co/*", zone_name = "peakflo.co" }
+
 
 [vars]
 ENABLE_INDEX_FORM = false

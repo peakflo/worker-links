@@ -213,7 +213,7 @@ app.post(ADMIN_PATH, async (c) => {
 
 		for (const [key, url] of Object.entries(result.result)) {
 			await c.env.KV.put(key, url, {
-				expirationTtl: 60 * 60 * 24 * 30 // 30 days
+				expirationTtl: 60 * 60 * 24 * 180 // 180 days
 			})
 		}
 
@@ -245,7 +245,7 @@ async function createLink(c: Context) {
 	}
 
 	await c.env.KV.put(c.get('key'), url, {
-		expirationTtl: 60 * 60 * 24 * 30 // 30 days
+		expirationTtl: 60 * 60 * 24 * 180 // 180 days
 	})
 	return Response.json(
 		{
